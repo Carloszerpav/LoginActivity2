@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.loginactivity.Nota;
+import com.example.loginactivity.domains.Nota;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,15 +52,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Insertar Nota
     public void addNota(Nota nota) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues notaNueva = new ContentValues();
-        notaNueva.put(TABLE_NOTA_COLUMNA_ID, 1);
-        notaNueva.put(TABLE_NOTA_COLUMNA_NOMBRE, nota.getNombre()); // Nombre
-        notaNueva.put(TABLE_NOTA_COLUMNA_DESCRIPCION, nota.getDescripcion()); // Descripcion
-        notaNueva.put(TABLE_NOTA_COLUMNA_FECHA, nota.getFecha()); // Fecha
+
+        notaNueva.put(TABLE_NOTA_COLUMNA_NOMBRE, nota.getNombre());
+        notaNueva.put(TABLE_NOTA_COLUMNA_DESCRIPCION, nota.getDescripcion());
+        notaNueva.put(TABLE_NOTA_COLUMNA_FECHA, nota.getFecha());
 
         // Insertando fila
-        db.insert(TABLE_NOTA, null, notaNueva);
+        long id = db.insert(TABLE_NOTA, null, notaNueva);
+        int parseInt = (int) id;
+        nota.setId(parseInt);
+
         db.close(); // Cerrando conexion a base de datos
     }
 
@@ -139,14 +141,4 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    // Obtener cantidad de notas registradas
-    public int getCountriesCount() {
-        String countQuery = "SELECT  * FROM " + TABLE_NOTA;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
-
-        // return count
-        return cursor.getCount();
-    }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListNotasActivity">
+    tools:context=".activities.ListNotasActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -13,37 +13,8 @@
         tools:layout_editor_absoluteX="206dp"
         tools:layout_editor_absoluteY="157dp" />
 
-
-    <TableRow
-        android:id="@+id/listnotas"
-        android:layout_width="416dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginBottom="163dp"
-        android:padding="5dip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
-            android:orientation="horizontal">
-
-            <ListView
-                android:id="@+id/listviewn"
-                android:layout_width="377dp"
-                android:layout_height="match_parent">
-
-            </ListView>
-        </LinearLayout>
-
-
-    </TableRow>
-
     <ImageView
-        android:id="@+id/aggnota"
+        android:id="@+id/btnAgregarNota"
         android:layout_width="52dp"
         android:layout_height="53dp"
         android:layout_marginEnd="72dp"
@@ -53,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/flechaatras"
+        android:id="@+id/btnVolverAtras"
         android:layout_width="91dp"
         android:layout_height="84dp"
         android:layout_marginStart="46dp"
@@ -69,25 +40,20 @@
         android:layout_marginStart="138dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="139dp"
-        android:text="Lista de Notas:"
+        android:text="Lista de Notas"
         android:textColor="#94979b"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="84dp"
-        android:layout_span="1"
-        android:gravity="center"
-        android:text="sus notas:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notasListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="118dp"
+        android:layout_marginBottom="163dp"
+        android:padding="5dip"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.example.loginactivity.activities.MainActivity2;
+
 import java.util.List;
 
 public class ListTarea extends AppCompatActivity {

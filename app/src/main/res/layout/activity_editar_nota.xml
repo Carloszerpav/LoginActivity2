@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:layout_marginTop="80dp"
-        android:text="AGREGAR NOTA"
+        android:text="EDITAR NOTA"
         android:textColor="#94979b"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"

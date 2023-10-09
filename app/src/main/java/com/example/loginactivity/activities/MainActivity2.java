@@ -1,10 +1,13 @@
-package com.example.loginactivity;
+package com.example.loginactivity.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.loginactivity.ListTarea;
+import com.example.loginactivity.R;
 
 public class MainActivity2 extends AppCompatActivity {
     private Button botonNotas;

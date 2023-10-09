@@ -1,4 +1,4 @@
-package com.example.loginactivity;
+package com.example.loginactivity.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.content.Intent; // Importa la clase Intent
+import android.content.Intent;
+
+import com.example.loginactivity.R;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editTextUsuario, editTextContrasena;
@@ -46,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean validarCredenciales(String usuario, String contrasena) {
         String usuarioValido = "carlos"; // USUARIO PARA PROBAR LOGIN
         String contrasenaValida = "1234"; // CONTRASEÑA PARA PROBAR LOGIN
-
         return usuario.equals(usuarioValido) && contrasena.equals(contrasenaValida);
     }
 }

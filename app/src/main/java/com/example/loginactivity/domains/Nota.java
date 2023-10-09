@@ -1,4 +1,4 @@
-package com.example.loginactivity;
+package com.example.loginactivity.domains;
 
 import static android.R.attr.name;
 import static android.R.attr.theme;

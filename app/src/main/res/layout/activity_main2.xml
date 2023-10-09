@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".activities.MainActivity2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,7 +13,6 @@
         android:src="@drawable/fondo"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
-
 
     <TextView
         android:id="@+id/textView"
@@ -47,7 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nota" />
 
-
     <ImageView
         android:id="@+id/miImageView"
         android:layout_width="100dp"
@@ -57,7 +55,5 @@
         android:src="@drawable/user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
