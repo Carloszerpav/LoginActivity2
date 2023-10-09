@@ -13,7 +13,7 @@ public class ListTarea extends AppCompatActivity {
     private ImageView flechaAtras;
     private ImageView agregarTarea;
     private ListView listaTareas;
-    private TareasManager tareasManager; // Cambia la importación a la clase TareasManager
+    //private TareasManager tareasManager; // Cambia la importación a la clase TareasManager
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class ListTarea extends AppCompatActivity {
         listaTareas = findViewById(R.id.listtarea);
 
         // Inicializa TareasManager con el contexto actual
-        tareasManager = new TareasManager(this);
+        //tareasManager = new TareasManager(this);
 
         // Configura un clic en la imagen de flecha hacia atrás para ir a MainActivity2
         flechaAtras.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,7 @@ public class ListTarea extends AppCompatActivity {
     // Método para obtener la lista de tareas desde la base de datos
     private List<String> obtenerTareasDesdeBaseDeDatos() {
         // Utiliza TareasManager para obtener las tareas desde la base de datos
-        List<String> tareas = tareasManager.obtenerTareas();
+        List<String> tareas = null;
         // Retorna la lista de tareas obtenida desde la base de datos
         return tareas;
     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AggNota">
+    tools:context=".AgregarNotaActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -34,7 +34,7 @@
         android:layout_marginTop="163dp"
         android:layout_marginEnd="68dp"
         android:background="#FFFFFF"
-        android:text="Nombre nota:"
+        android:hint="Nombre nota:"
         android:textColor="#94979b"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

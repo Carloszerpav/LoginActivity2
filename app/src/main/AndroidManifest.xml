@@ -18,7 +18,7 @@
             android:name=".AggTarea"
             android:exported="false" />
         <activity
-            android:name=".AggNota"
+            android:name=".AgregarNotaActivity"
             android:exported="false" />
         <activity
             android:name=".ListTarea"

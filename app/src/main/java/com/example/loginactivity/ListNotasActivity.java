@@ -2,7 +2,9 @@ package com.example.loginactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
@@ -52,27 +54,27 @@ public class ListNotasActivity extends AppCompatActivity {
         aggNotaImageView = findViewById(R.id.aggnota);
 
         // Agrega un OnClickListener a la imagen "aggnota"
-        /*aggNotaImageView.setOnClickListener(new View.OnClickListener() {
+        aggNotaImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Crea un Intent para abrir la actividad AggNota
-                Intent intent = new Intent(ListNotasActivity.this, AggNota.class);
+                Intent intent = new Intent(ListNotasActivity.this, AddNotaActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         // Obtén referencia a la imagen con ID "flechaatras" en tu diseño XML
         volverAtrasImageView = findViewById(R.id.flechaatras);
 
         // Agrega un OnClickListener a la imagen "flechaatras"
-        /*flechaAtrasImageView.setOnClickListener(new View.OnClickListener() {
+        volverAtrasImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Crea un Intent para volver a la actividad MainActivity2
                 Intent intent = new Intent(ListNotasActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
     @Override

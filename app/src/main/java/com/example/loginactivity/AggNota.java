@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Calendar;
 
+import entidades.DatabaseHandler;
+
 public class AggNota extends AppCompatActivity {
 
     private Button botonSeleccionarFecha, guardarNotaButton, volverNotaButton;
@@ -62,7 +64,7 @@ public class AggNota extends AppCompatActivity {
                 String descripcion = editTextDescripcion.getText().toString();
 
                 // Guardar la nota en la tabla de notas
-                entidades.ConexionSQLiteHelper dbHelper = new entidades.ConexionSQLiteHelper(AggNota.this);
+                /*dbHelper = new DatabaseHandler(AggNota.this);
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
 
                 ContentValues values = new ContentValues();
@@ -80,6 +82,8 @@ public class AggNota extends AppCompatActivity {
 
                 // Cerrar la base de datos
                 db.close();
+AggNota
+                 */
 
                 // Después de guardar la nota, inicia la actividad ListNotasActivity
                 Intent intent = new Intent(AggNota.this, ListNotasActivity.class);

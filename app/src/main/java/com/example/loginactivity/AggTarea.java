@@ -17,13 +17,15 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import entidades.DatabaseHandler;
+
 public class AggTarea extends AppCompatActivity {
 
     private EditText nombreTareaEditText;
     private EditText descripcionEditText;
     private Button guardarButton;
     private Button volverButton;
-    private entidades.ConexionSQLiteHelper dbHelper;
+    private DatabaseHandler dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,7 @@ public class AggTarea extends AppCompatActivity {
         guardarButton = findViewById(R.id.guardartarea);
         volverButton = findViewById(R.id.volvertarea);
 
-        dbHelper = new entidades.ConexionSQLiteHelper(this);
+        dbHelper = new DatabaseHandler(this);
 
         guardarButton.setOnClickListener(new View.OnClickListener() {
             @Override
